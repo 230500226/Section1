@@ -1,13 +1,14 @@
+package section1;
 // Derived class for Motorcycle
-class Motorcycle _____ Vehicle {
+class Motorcycle extends Vehicle {
     private boolean hasSidecar;
 
     public Motorcycle(String brand, String model, int year, boolean hasSidecar) {
-        _____(brand, model, year);
+       super(brand, model, year);
         this.hasSidecar = hasSidecar;
     }
 
-    public _____ hasSidecar() {
+    public boolean hasSidecar() {
         return hasSidecar;
     }
 }

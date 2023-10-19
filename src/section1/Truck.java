@@ -1,13 +1,15 @@
+package section1;
+
 // Derived class for Truck
-class Truck _____ Vehicle {
+class Truck extends Vehicle {
     private double loadCapacity;
 
     public Truck(String brand, String model, int year, double loadCapacity) {
-        _____(brand, model, year);
+        super(brand, model, year);
         this.loadCapacity = loadCapacity;
     }
 
-    public _____ getLoadCapacity() {
+    public double getLoadCapacity() {
         return loadCapacity;
     }
 }
