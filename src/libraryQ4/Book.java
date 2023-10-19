@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.util._____;
+import java.util.*;
 
 // Book class
 class Book {
@@ -8,21 +8,21 @@ class Book {
     private String author;
     private String ISBN;
 
-    public _____ (String _____, String author, _____ ISBN) {
-        _____.title = title;
-        _____.author = author;
-        _____.ISBN = ISBN;
+    public Book (String title, String author, String ISBN) {
+        this.title = title;
+        this.author = author;
+        this.ISBN = ISBN;
     }
 
-    public _____ getTitle() {
+    public String getTitle() {
         return title;
     }
 
-    public _____ getAuthor() {
+    public String getAuthor() {
         return author;
     }
 
-    public _____ getISBN() {
+    public String getISBN() {
         return ISBN;
     }
 

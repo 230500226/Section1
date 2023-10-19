@@ -1,8 +1,12 @@
 // Demonstration with user input
-_____ class Main {
-    public _____ void main(_____ [] args) {
-        Scanner _____ = new Scanner(_____);
-        LibrarySystem library = new _____();
+
+import java.util.List;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String [] args) {
+        Scanner scanner = new Scanner(System.in);
+        LibrarySystem library = new LibrarySystem();
 
         System.out.println("Library System");
         System.out.println("1. Add a new book");
@@ -12,14 +16,14 @@ _____ class Main {
         int choice = scanner.nextInt();
         scanner.nextLine();  // Consume newline
 
-        switch (_____) {
+        switch (choice) {
             case 1:
                 System.out.print("Enter book title: ");
-                String title = _____.nextLine();
+                String title = scanner.nextLine();
                 System.out.print("Enter book author: ");
-                String author = _____.nextLine();
+                String author = scanner.nextLine();
                 System.out.print("Enter book ISBN: ");
-                String ISBN = _____.nextLine();
+                String ISBN = scanner.nextLine();
                 Book newBook = new Book(title, author, ISBN);
                 library.addBook(newBook);
                 break;
@@ -37,7 +41,7 @@ _____ class Main {
                 System.out.print("Enter author's name to search: ");
                 author = scanner.nextLine();
                 List<Book> booksByAuthor = library.findBookByAuthor(author);
-                _____(booksByAuthor.size() > 0) {
+                if (booksByAuthor.size() > 0) {
                     for (Book book : booksByAuthor) {
                         System.out.println(book);
                     }
@@ -45,10 +49,10 @@ _____ class Main {
                     System.out.println("No books found by this author.");
                 }
                 break;
-            _____:
+            default :
                 System.out.println("Invalid choice.");
         }
 
-        _____.close();
+       scanner.close();
     }
 }
