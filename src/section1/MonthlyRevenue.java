@@ -31,12 +31,12 @@ public class MonthlyRevenue {
     }
 
     public static int Mean(int[] arrRevenue){
-        if (arrRevenue.length == 0 ){
+        if (arrRevenue.length == 0 ){ // If the array is empty there will be no mean or any other calculation
             return 0;
         }
         int sum = 0;
 
-            for (int num : arrRevenue){ //for each loop 
+            for (int num : arrRevenue){ // For each loop to add every number in the array
                 sum +=num;
             }
         
@@ -48,12 +48,12 @@ public class MonthlyRevenue {
             return 0;
         }
         
-        Arrays.sort(arrRevenue);
+        Arrays.sort(arrRevenue); // Sorts the array in ascending order
 
-        if (arrRevenue.length %2 == 0){
+        if (arrRevenue.length %2 == 0){ // If the array has an even number of elements the median will be the average of the 2 numbers in the middle
             return (arrRevenue[(arrRevenue.length / 2)- 1] + arrRevenue[arrRevenue.length / 2]) / 2;
         } else {
-            return arrRevenue[arrRevenue.length / 2];
+            return arrRevenue[arrRevenue.length / 2]; // Or it returns the middle number for the median
         }
     }
 

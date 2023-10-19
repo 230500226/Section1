@@ -4,7 +4,7 @@ public class User {
     private String username; // Creating the attributes
     private String password; // Encapsulating the attributes
 
-    public User(String username, String password) {
+    public User(String username, String password) { // Creating the contructor 
         this.username = username;
         this.password = password;
     }
